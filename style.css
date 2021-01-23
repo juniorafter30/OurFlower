@@ -1,0 +1,38 @@
+/* GLOBAL STYLINGS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* upper button styling */
+
+.upper {
+  display: none;
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  font-size: 3rem;
+  opacity: 50%;
+  z-index: 100;
+}
+
+.upper:hover {
+  opacity: 100%;
+  transition: 1s;
+}
+
+img {
+  height: 2rem;
+}
