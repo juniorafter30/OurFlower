@@ -79,7 +79,7 @@ ul i {
 
 .hero h2 {
   color: rgb(222, 135, 147);
-  font-size: 5rem;
+  font-size: 4rem;
   background: black;
   padding: 3rem;
   opacity: 85%;
@@ -111,12 +111,20 @@ ul i {
   border-bottom-left-radius: 20px;
   border: 0.1rem solid black;
   margin-top: 3rem;
+  text-transform: uppercase;
+}
+
+.hero button:hover {
+  background: black;
+  border: 0.1rem solid rgb(222, 135, 147);
+  color: rgb(222, 135, 147);
+  transition: all 0.5 ease;
 }
 
 /* INTRO SECTION */
 
 .intro {
-  min-height: 50vh;
+  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
 }
@@ -161,6 +169,12 @@ ul i {
   font-size: 2rem;
 }
 
+/* SHOP SECTION */
+
+.shop {
+  min-height: 100vh;
+}
+
 /* upper button will let user come back to start of the page*/
 
 .upper {
@@ -185,9 +199,14 @@ ul i {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 842px) {
   html {
     font-size: 40%;
+  }
+  .hero h2 {
+    font-size: 3rem;
+    border: 0.5rem solid rgb(222, 135, 147);
+    scale: 1.1;
   }
 
   .hero {
@@ -195,19 +214,35 @@ ul i {
   }
 
   .active {
-    transform: translate(0px);
+    transform: translateX(-100%);
     transition: 1s ease;
   }
+  .toggle .line1 {
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+    background: black;
+    transition: all 1s ease;
+  }
+  .toggle .line2 {
+    opacity: 0;
+    transition: all 1s ease;
+  }
+  .toggle .line3 {
+    transform: rotateZ(405deg) translate(-8px, -6px);
+    background: black;
+    transition: all 1s ease;
+  }
+
   nav {
     display: flex;
+    height: 100%;
     width: 100%;
     align-items: center;
     justify-content: space-around;
     font-size: 5rem;
-    transition: 1s ease;
     position: fixed;
-    width: 100%;
-    transform: translate(-500px);
+    top: 0;
+    left: 100%;
+    transition: transform 1s ease;
     background: #d66d75;
     z-index: 1;
   }
@@ -236,8 +271,9 @@ ul i {
 
   .burger span {
     padding: 0.2rem 3rem;
-    background: #fff;
+    background: #e2606b;
     display: block;
     margin: 1rem;
+    transition: all 1s ease;
   }
 }
