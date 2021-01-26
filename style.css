@@ -173,6 +173,44 @@ ul i {
 
 .shop {
   min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: #35302f;
+}
+
+.shop img {
+  height: 30rem;
+  width: 20rem;
+  margin-bottom: 2rem;
+}
+.shop img:hover {
+  scale: 1.1;
+  transition: 1s ease;
+}
+
+.shop p {
+  padding: 0.2rem;
+  font-size: 1.4rem;
+}
+.shop .shop-item {
+  margin: 5rem;
+  background: #e2606b;
+  padding: 2rem;
+  border: 5px solid #e29587;
+}
+
+.shop button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+.shop button:hover {
+  scale: 1.1;
+  color: #35302f;
 }
 
 /* upper button will let user come back to start of the page*/
@@ -184,6 +222,11 @@ ul i {
   font-size: 3rem;
   opacity: 50%;
   z-index: 100;
+  display: none;
+}
+
+.upperUp {
+  display: block;
 }
 
 .upper:hover {
@@ -200,6 +243,9 @@ ul i {
 }
 
 @media screen and (max-width: 842px) {
+  .upper {
+    display: none !important;
+  }
   html {
     font-size: 40%;
   }

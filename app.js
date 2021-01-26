@@ -19,3 +19,7 @@ navLinks.forEach(link => {
     })
 })
 
+window.addEventListener('scroll', ()=>{
+upperButton.classList.toggle('upperUp', window.scrollY > 0)
+});
+
